@@ -4,7 +4,7 @@
     <ControlTemplate x:Key="buttonTemplate1" TargetType="Button">
         <Border CornerRadius="8" BorderBrush="Beige" BorderThickness="2" Background="{TemplateBinding Background}">
             <Grid>
-                <TextBlock HorizontalAlignment="Center" Padding="{TemplateBinding Padding}" Foreground="Beige">
+                <TextBlock HorizontalAlignment="Center" Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}">
                         <ContentPresenter ></ContentPresenter>
                 </TextBlock>
             </Grid>
@@ -15,11 +15,13 @@
             <Setter Property="Margin" Value="20"></Setter>
             <Setter Property="Padding" Value="20"></Setter>
             <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Background" Value="Green"></Setter>
             <Setter Property="Template" Value="{StaticResource buttonTemplate1}"></Setter>
         </Style.Setters>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Foreground" Value="Black"></Setter>
+                <Setter Property="Background" Value="White"></Setter>
+                <Setter Property="Cursor" Value="Hand"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>
