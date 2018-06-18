@@ -20,7 +20,7 @@
             <Setter Property="FontStyle" Value="Italic"></Setter>
             <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
-        <Style TargetType="Label" x:Key="labelStyle2" BasedOn="{DynamicResource labelStyle}">
+        <Style TargetType="Label" x:Key="labelStyle2" BasedOn="{StaticResource labelStyle}">
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="Foreground" Value="Chocolate"></Setter>
         </Style>
@@ -31,6 +31,6 @@
             Чудо кнопка</Button>
         <Label Style="{DynamicResource labelStyle2}">Надпись 2 до кнопки</Label>
         <Button Height="25" Click="Button_Click" Width="170" Background="{DynamicResource CoralForever1}">Чудо кнопка</Button>
-        <Label >Надпись 3 до кнопки</Label>
+        <Label Style="{DynamicResource labelStyle2}">Надпись 3 до кнопки</Label>
     </StackPanel>
 </Window>
